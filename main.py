@@ -20,11 +20,12 @@ if __name__ == '__main__':
 		textedput = ''
 		print('buttonmash & press enter\nkeep doing this until you are satisfied. type "stop" to start generating.')
 		while textedput != 'stop':
-			textedput = input('>')
 			lasagna = f'{lasagna}\n{" ".join(textedput)}'
 			print(lasagna)
 			print(len(lasagna.split('\n')))
-		newfilename = f'{lasagna.split('\n')[1]}.txt'
+			textedput = input('>')
+		newline = "\n"
+		newfilename = f'{lasagna.split(newline)[1]}.txt'
 		with open(newfilename,'w') as f:
 			f.write(lasagna)
 			print(f'saved as {newfilename}')
